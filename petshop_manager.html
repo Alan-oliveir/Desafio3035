@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetShop Manager</title>
+    <link rel="stylesheet" href="petshop_css.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">🐾 PetShop Premium</div>
+        <ul class="nav-links">
+          <li>
+            <button onclick="showPage('home')" class="active">Home</button>
+          </li>
+          <li><button onclick="showPage('clientes')">Clientes</button></li>
+          <li><button onclick="showPage('produtos')">Produtos</button></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Página 1: Home -->
+      <div id="home" class="page active">
+        <div class="hero">
+          <h1>🐾 Bem-vindo ao PetShop Premium</h1>
+          <p>
+            Cuidando do seu melhor amigo com carinho e profissionalismo há mais
+            de 10 anos. Oferecemos serviços veterinários, banho e tosa,
+            hotelzinho e uma loja completa com os melhores produtos para o seu
+            pet!
+          </p>
+        </div>
+
+        <div class="form-container">
+          <h2>📋 Cadastro de Cliente</h2>
+          <form id="cadastroForm">
+            <div class="form-section">
+              <h3>👤 Dados do Tutor</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Nome:</label>
+                  <input type="text" id="tutorNome" required />
+                </div>
+                <div class="form-group">
+                  <label>Telefone:</label>
+                  <input type="tel" id="tutorTelefone" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Endereço:</label>
+                <input type="text" id="tutorEndereco" required />
+              </div>
+              <div class="form-group">
+                <label>Data do Atendimento:</label>
+                <input type="date" id="dataAtendimento" required />
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>🐕 Dados do Animal</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Nome:</label>
+                  <input type="text" id="animalNome" required />
+                </div>
+                <div class="form-group">
+                  <label>Idade:</label>
+                  <input type="number" id="animalIdade" min="0" required />
+                </div>
+                <div class="form-group">
+                  <label>Porte:</label>
+                  <select id="animalPorte" required>
+                    <option value="">Selecione...</option>
+                    <option value="Pequeno">Pequeno</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Grande">Grande</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit">✅ Cadastrar Cliente</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Página 2: Clientes -->
+      <div id="clientes" class="page">
+        <h2
+          style="
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+          "
+        >
+          👥 Clientes Cadastrados
+        </h2>
+        <div id="clientesGrid" class="cards-grid"></div>
+      </div>
+
+      <!-- Página 3: Produtos -->
+      <div id="produtos" class="page">
+        <h2
+          style="
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+          "
+        >
+          🛒 Loja de Produtos
+        </h2>
+        <div id="produtosGrid" class="cards-grid"></div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <h2>📄 Detalhes do Cliente</h2>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <script src="petshop_js.js"></script>
+  </body>
+</html>
