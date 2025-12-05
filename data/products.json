@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Dog Food",
+    "price": 89.90,
+    "emoji": "🍖",
+    "description": "High quality food for adult dogs"
+  },
+  {
+    "id": 2,
+    "name": "Premium Cat Food",
+    "price": 79.90,
+    "emoji": "🐟",
+    "description": "Special food for adult cats"
+  },
+  {
+    "id": 3,
+    "name": "Adjustable Collar",
+    "price": 29.90,
+    "emoji": "🦴",
+    "description": "Comfortable and resistant collar"
+  },
+  {
+    "id": 4,
+    "name": "Interactive Toy",
+    "price": 39.90,
+    "emoji": "🎾",
+    "description": "Stimulating toy for pets"
+  },
+  {
+    "id": 5,
+    "name": "Comfortable Bed",
+    "price": 149.90,
+    "emoji": "🛏️",
+    "description": "Soft and cozy bed"
+  },
+  {
+    "id": 6,
+    "name": "Pet Shampoo",
+    "price": 24.90,
+    "emoji": "🧴",
+    "description": "Hypoallergenic shampoo"
+  },
+  {
+    "id": 7,
+    "name": "Double Bowl",
+    "price": 34.90,
+    "emoji": "🥣",
+    "description": "Bowl with compartments"
+  },
+  {
+    "id": 8,
+    "name": "Cat Scratcher",
+    "price": 119.90,
+    "emoji": "🪵",
+    "description": "Resistant vertical scratcher"
+  }
+]

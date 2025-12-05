@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PetShop Manager</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <!-- Navbar -->
     <nav>
       <div class="nav-container">
         <div class="logo">🐾 PetShop Premium</div>
@@ -15,80 +15,77 @@
           <li>
             <button onclick="showPage('home')" class="active">Home</button>
           </li>
-          <li><button onclick="showPage('clientes')">Clientes</button></li>
-          <li><button onclick="showPage('produtos')">Produtos</button></li>
+          <li><button onclick="showPage('clients')">Clients</button></li>
+          <li><button onclick="showPage('products')">Products</button></li>
         </ul>
       </div>
     </nav>
 
     <div class="container">
-      <!-- Página 1: Home -->
       <div id="home" class="page active">
         <div class="hero">
-          <h1>🐾 Bem-vindo ao PetShop Premium</h1>
+          <h1>🐾 Welcome to PetShop Premium</h1>
           <p>
-            Cuidando do seu melhor amigo com carinho e profissionalismo há mais
-            de 10 anos. Oferecemos serviços veterinários, banho e tosa,
-            hotelzinho e uma loja completa com os melhores produtos para o seu
-            pet!
+            Taking care of your best friend with love and professionalism for
+            over 10 years. We offer veterinary services, grooming, pet hotel,
+            and a complete store with the best products for your pet!
           </p>
         </div>
 
         <div class="form-container">
-          <h2>📋 Cadastro de Cliente</h2>
-          <form id="cadastroForm">
+          <h2>📋 Client Registration</h2>
+          <form id="clientForm">
             <div class="form-section">
-              <h3>👤 Dados do Tutor</h3>
+              <h3>👤 Owner Information</h3>
               <div class="form-row">
                 <div class="form-group">
-                  <label>Nome:</label>
-                  <input type="text" id="tutorNome" required />
+                  <label>Name:</label>
+                  <input type="text" id="ownerName" required />
                 </div>
                 <div class="form-group">
-                  <label>Telefone:</label>
-                  <input type="tel" id="tutorTelefone" required />
+                  <label>Phone:</label>
+                  <input type="tel" id="ownerPhone" required />
                 </div>
               </div>
               <div class="form-group">
-                <label>Endereço:</label>
-                <input type="text" id="tutorEndereco" required />
+                <label>Address:</label>
+                <input type="text" id="ownerAddress" required />
               </div>
               <div class="form-group">
-                <label>Data do Atendimento:</label>
-                <input type="date" id="dataAtendimento" required />
+                <label>Appointment Date:</label>
+                <input type="date" id="appointmentDate" required />
               </div>
             </div>
 
             <div class="form-section">
-              <h3>🐕 Dados do Animal</h3>
+              <h3>🐕 Pet Information</h3>
               <div class="form-row">
                 <div class="form-group">
-                  <label>Nome:</label>
-                  <input type="text" id="animalNome" required />
+                  <label>Name:</label>
+                  <input type="text" id="petName" required />
                 </div>
                 <div class="form-group">
-                  <label>Idade:</label>
-                  <input type="number" id="animalIdade" min="0" required />
+                  <label>Age:</label>
+                  <input type="number" id="petAge" min="0" required />
                 </div>
                 <div class="form-group">
-                  <label>Porte:</label>
-                  <select id="animalPorte" required>
-                    <option value="">Selecione...</option>
-                    <option value="Pequeno">Pequeno</option>
-                    <option value="Médio">Médio</option>
-                    <option value="Grande">Grande</option>
+                  <label>Size:</label>
+                  <select id="petSize" required>
+                    <option value="">Select...</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
                   </select>
                 </div>
               </div>
             </div>
 
-            <button type="submit">✅ Cadastrar Cliente</button>
+            <button type="submit">✅ Register Client</button>
           </form>
         </div>
       </div>
 
-      <!-- Página 2: Clientes -->
-      <div id="clientes" class="page">
+      <div id="clients" class="page">
         <h2
           style="
             color: white;
@@ -97,13 +94,12 @@
             font-size: 2rem;
           "
         >
-          👥 Clientes Cadastrados
+          👥 Registered Clients
         </h2>
-        <div id="clientesGrid" class="cards-grid"></div>
+        <div id="clientsGrid" class="cards-grid"></div>
       </div>
 
-      <!-- Página 3: Produtos -->
-      <div id="produtos" class="page">
+      <div id="products" class="page">
         <h2
           style="
             color: white;
@@ -112,24 +108,25 @@
             font-size: 2rem;
           "
         >
-          🛒 Loja de Produtos
+          🛒 Product Store
         </h2>
-        <div id="produtosGrid" class="cards-grid"></div>
+        <div id="productsGrid" class="cards-grid"></div>
       </div>
     </div>
 
-    <!-- Modal -->
     <div id="modal" class="modal">
       <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">×</button>
-        <h2>📄 Detalhes do Cliente</h2>
+        <h2>📄 Client Details</h2>
         <div id="modalContent"></div>
       </div>
     </div>
 
-    <!-- Toast -->
     <div id="toast" class="toast"></div>
 
-    <script src="script.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/clients.js"></script>
+    <script src="scripts/products.js"></script>
+    <script src="scripts/app.js"></script>
   </body>
 </html>
